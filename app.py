@@ -19,3 +19,38 @@ import uvicorn
 import aiofiles
 import csv
 from PyPDF2 import PdfReader
+
+app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+templates = Jinja2Templates(directory="templates")
+
+os.environ["OPENAI_API_KEY"] = ""
+
+def count_pdf_pages(pdf_path):
+    try:
+        pdf = PdfReader(pdf_path)
+        return len(pdf.pages)
+    except Exception as e:
+        print("Error:", e)
+        return None
+    
+def file_processing(file_path):
+    loader = PyPDFLoader(file_path)
+    data = loader.load()
+
+    question_gen = ''
+
+    for page in data:
+        question_gen += page.page_content
+
+    splitter_gues_gen = TokenTextSplitter(
+        model = "gpt-3,5-turbo" , 
+        chunk_size = 10000,
+        chunk_overlap = 200
+    )
+
+    chunks_ques_gen = splitter_gues_gen.split_text(question_gen)
+
+    document_ques_gen = [Document(page_content=t) for t in chunks_ques_gen]
