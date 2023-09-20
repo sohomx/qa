@@ -54,3 +54,16 @@ def file_processing(file_path):
     chunks_ques_gen = splitter_gues_gen.split_text(question_gen)
 
     document_ques_gen = [Document(page_content=t) for t in chunks_ques_gen]
+
+    splitter_ans_gen = TokenTextSplitter(
+        model = "gpt-3.5-turbo",
+        chunk_size = 10000,
+        chunk_overlap = 200
+    )
+
+    document_answer_gen = splitter_ans_gen.split_text(
+        document_ques_gen
+    )
+
+    return document_ques_gen, document_answer_gen
+
