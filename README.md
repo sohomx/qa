@@ -2,8 +2,8 @@
 QA generator application where you upload a pdf (chunk of text), creates embeddings and generates open-ended questions and answers
 
 <p align="center">
-<a href=https://github.com/sohomx/qa target="_blank">
-<img src='/placeholder.jpg' width="100%" alt="Banner" />
+<!-- <a href=https://github.com/sohomx/qa target="_blank">
+<img src='/placeholder.jpg' width="100%" alt="Banner" /> -->
 </a>
 </p>
 
@@ -96,9 +96,9 @@ you can upload a single chapter of history or english literature and the app wil
 v2 version it will have MCQs as well. here is the example of how it works:
 
 here you upload the corpus of text in the form of pdf where you want to generate questions from (mention how many pages of questions you would want):
-![[Pasted image 20231016142451.png]]
-and now you would see how it autogenerates both Q and A based on the topics uploaded in the subjective manner:
 
+and now you would see how it autogenerates both Q and A based on the topics uploaded in the subjective manner:
+obsidian://open?vault=Obsidian%20Vault&file=Pasted%20image%2020231016142451.png
 ![[Pasted image 20231016142541.png]]
 (you can also store both Q and A in a database if the school wishes it )
 ![[Pasted image 20231016142638.png]]
