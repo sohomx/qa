@@ -96,11 +96,13 @@ you can upload a single chapter of history or english literature and the app wil
 v2 version it will have MCQs as well. here is the example of how it works:
 
 here you upload the corpus of text in the form of pdf where you want to generate questions from (mention how many pages of questions you would want):
+![image](https://github.com/sohomx/qa/assets/84140043/48d23938-ab76-406d-91ec-d651808ad04f)
 
 and now you would see how it autogenerates both Q and A based on the topics uploaded in the subjective manner:
-obsidian://open?vault=Obsidian%20Vault&file=Pasted%20image%2020231016142451.png
-![[Pasted image 20231016142541.png]]
+![image](https://github.com/sohomx/qa/assets/84140043/f78d648c-270a-4874-a15c-b597744b4792)
+
 (you can also store both Q and A in a database if the school wishes it )
-![[Pasted image 20231016142638.png]]
+![image](https://github.com/sohomx/qa/assets/84140043/e76b2e26-2e49-4f26-92dc-6bb978199be3)
+
 
 
